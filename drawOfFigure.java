@@ -39,7 +39,6 @@ public class drawOfFigure {
 			}
 			out.println();
 			
-			
 // Проверка введенных значений на консоле			
 			for (x=0; x<vertex; x++) {
 				out.print("Точка "+x+" = ");
@@ -57,5 +56,3 @@ public class drawOfFigure {
 		out.println("Количество вершин (vertex) "+vertex);
 	}
 }
-
-
