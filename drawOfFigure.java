@@ -2,57 +2,58 @@ import javax.swing.*;
 import static java.lang.System.out;
 
 public class drawOfFigure {
-	public static void main(String[] args) {
-		int kind, side = 0, vertex = 0;
-		double x0 = 0, y0 = 0, radius = 0;
-		double[][] points;
+    public static void main(String[] args) {
+	int kind, side = 0, vertex = 0;
+	double x0 = 0, y0 = 0, radius = 0;
+	double[][] points;
 
-		kind = Integer
-				.parseInt(JOptionPane
-						.showInputDialog("Введите тип фигуры:\n1 - Окружность\n2 - Равносторонний многоугольник\n3 - Произвольная фигура"));
+	kind = Integer
+		.parseInt(JOptionPane
+			.showInputDialog("Р’РІРµРґРёС‚Рµ С‚РёРї С„РёРіСѓСЂС‹:\n1 - РћРєСЂСѓР¶РЅРѕСЃС‚СЊ\n2 - Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ РјРЅРѕРіРѕСѓРіРѕР»СЊРЅРёРє\n3 - РџСЂРѕРёР·РІРѕР»СЊРЅР°СЏ С„РёРіСѓСЂР°"));
 
-		switch (kind) {
-		case 1:
-			x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра:"));
-			y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра:"));
-			radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
-			break;
+	switch (kind) {
+	case 1:
+	    x0 = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ X С†РµРЅС‚СЂР°:"));
+	    y0 = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ Y С†РµРЅС‚СЂР°:"));
+	    radius = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ:"));
+	    break;
 
-		case 2:
-			x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
-			y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
-			radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
-			side = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
-			break;
+	case 2:
+	    x0 = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ X С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹:"));
+	    y0 = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ Y С†РµРЅС‚СЂР° С„РёРіСѓСЂС‹:"));
+	    radius = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ РѕРїРёСЃР°РЅРЅРѕР№ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё:"));
+	    side = Integer.parseInt(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ:"));
+	    break;
 
-		case 3:
-			vertex = Integer.parseInt(JOptionPane.showInputDialog("Введите количество вершин:"));
-			points = new double [vertex][2];
-			int x=0, y=0;
-			for (x = 0; x < vertex; x++) {
-				points[x][y] = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X" +x+ " фигуры:"));
-//				out.print(points [x][y] + "  ");
-				y = 1;
-				points[x][y] = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y" +x+ " фигуры:"));
-//				out.println(points [x][y]);
-				y=0;
-			}
-			out.println();
-			
-// Проверка введенных значений на консоле			
-			for (x=0; x<vertex; x++) {
-				out.print("Точка "+x+" = ");
-				for (y=0; y<=1; y++) {
-					out.print(points [x][y]+"  ");
-				}
-				out.println();
-			}
-			out.println();
+	case 3:
+	    vertex = Integer.parseInt(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ:"));
+	    points = new double[vertex][2];
+	    int x = 0,
+	    y = 0;
+	    for (x = 0; x < vertex; x++) {
+		points[x][y] = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ X" + x + " С„РёРіСѓСЂС‹:"));
+		// out.print(points [x][y] + "  ");
+		y = 1;
+		points[x][y] = Double.parseDouble(JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ Y" + x + " С„РёРіСѓСЂС‹:"));
+		// out.println(points [x][y]);
+		y = 0;
+	    }
+	    out.println();
+
+	    // РџСЂРѕРІРµСЂРєР° РІРІРµРґРµРЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№ РЅР° РєРѕРЅСЃРѕР»Рµ
+	    for (x = 0; x < vertex; x++) {
+		out.print("РўРѕС‡РєР° " + x + " = ");
+		for (y = 0; y <= 1; y++) {
+		    out.print(points[x][y] + "  ");
 		}
-		out.println("Тип фигуры (kind) "+kind);
-		out.println("Центр фигуры (x0 x0) "+x0+"  "+y0);
-		out.println("Радиус (radius) "+radius);
-		out.println("Количество сторон (side) "+side);
-		out.println("Количество вершин (vertex) "+vertex);
+		out.println();
+	    }
+	    out.println();
 	}
+	out.println("РўРёРї С„РёРіСѓСЂС‹ (kind) " + kind);
+	out.println("Р¦РµРЅС‚СЂ С„РёРіСѓСЂС‹ (x0 x0) " + x0 + "  " + y0);
+	out.println("Р Р°РґРёСѓСЃ (radius) " + radius);
+	out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ (side) " + side);
+	out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ (vertex) " + vertex);
+    }
 }
