@@ -7,7 +7,7 @@ public class drawOfFigure {
 //	int side = 0, vertex = 0;
 //	double x0 = 0, y0 = 0, radius = 0;
 	double[][] points;
-	Figure Fig = new Figure();
+//	Figure Fig = new Figure();
 	
 
 	kind = Integer
@@ -16,25 +16,30 @@ public class drawOfFigure {
 	
 	switch (kind) {
 	case 1:
-	    Fig.x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра:"));
-	    Fig.y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра:"));
-	    Fig.radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
+	    Figure Fig1 = new Figure();
+	    Fig1.x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра:"));
+	    Fig1.y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра:"));
+	    Fig1.radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
+	    Fig1.ShowData ();
 	    break;
 
 	case 2:
-	    Fig.x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
-	    Fig.y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
-	    Fig.radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
-	    Fig.side = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
+	    Figure Fig2 = new Figure();
+	    Fig2.x0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
+	    Fig2.y0 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
+	    Fig2.radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
+	    Fig2.side = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
+	    Fig2.ShowData ();
 	    break;
 
 	case 3:
-	    Fig.vertex = Integer.parseInt(JOptionPane.showInputDialog("Введите количество вершин:"));
-	    int vertex = Fig.vertex;
-	    points = new double[vertex][2];
+	    Figure Fig3 = new Figure();
+	    Fig3.vertex = Integer.parseInt(JOptionPane.showInputDialog("Введите количество вершин:"));
+//	    int vertex = Fig3.vertex;
+	    points = new double[Fig3.vertex][2];
 	    int x = 0,
 	    y = 0;
-	    for (x = 0; x < vertex; x++) {
+	    for (x = 0; x < Fig3.vertex; x++) {
 		points[x][y] = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X" + x + " фигуры:"));
 		// out.print(points [x][y] + "  ");
 		y = 1;
@@ -42,10 +47,11 @@ public class drawOfFigure {
 		// out.println(points [x][y]);
 		y = 0;
 	    }
+	    Fig3.ShowData ();
 	    out.println();
 
 	    // Проверка введенных значений на консоле
-	    for (x = 0; x < vertex; x++) {
+	    for (x = 0; x < Fig3.vertex; x++) {
 		out.print("Точка " + x + " = ");
 		for (y = 0; y <= 1; y++) {
 		    out.print(points[x][y] + "  ");
@@ -55,9 +61,9 @@ public class drawOfFigure {
 	    out.println();
 	}
 	out.println("Тип фигуры (kind) " + kind);
-	out.println("Центр фигуры (x0 x0) " + Fig.x0 + "  " + Fig.y0);
-	out.println("Радиус (radius) " + Fig.radius);
-	out.println("Количество сторон (side) " + Fig.side);
-	out.println("Количество вершин (vertex) " + Fig.vertex);
+//	out.println("Центр фигуры (x0 x0) " + Fig.x0 + "  " + Fig.y0);
+//	out.println("Радиус (radius) " + Fig.radius);
+//	out.println("Количество сторон (side) " + Fig.side);
+//	out.println("Количество вершин (vertex) " + Fig.vertex);
     }
 }
