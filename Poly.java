@@ -1,10 +1,22 @@
 import static java.lang.System.out;
 
-// import javax.swing.*;
 
 public class Poly { // class of Poly Line
-    int vertex;
-    double[][] points = new double[vertex][2];
+    private int vertex;
+    private double[][] points;
+    
+    public void setVertex (int v) {
+	vertex = v;
+	points = new double[vertex][2];
+    }
+    
+    public int getVertex () {
+	return vertex;
+    }
+    
+    public void setPoint (int i, int j, double z) {
+	points [i][j] = z;
+    }
 
     public void drawPoly() { // draw of Poly Line
 	// will be a code to draw of Poly Line
