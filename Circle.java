@@ -1,15 +1,16 @@
 import static java.lang.System.out;
 
-
-
 public class Circle { // class of Circle
 
-    private double x0 = 0, y0 = 0, radius = 0;
+    private double radius = 0;
+    FrameCore center = new FrameCore ();
 
-    public void setCircle(double x, double y, double r) { // setter
-	x0 = x;
-	y0 = y;
+    public void setRadius(double r) {
 	radius = r;
+    }
+    
+    public void setCenter (double x, double y) {
+	center.setCenter(x, y);
     }
 
     public void drawCircle() { 
@@ -17,7 +18,7 @@ public class Circle { // class of Circle
     }
 
     public void showDataCircle() { // show data of Circle on Console
-	out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
+	out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
 	out.println("Радиус (radius) " + radius);
     }
 }

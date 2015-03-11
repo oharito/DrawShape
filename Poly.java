@@ -18,6 +18,5 @@ public class Poly { // class of Poly Line
 		}
 		out.println();
 	    }
-	    out.println();
     }
 }
