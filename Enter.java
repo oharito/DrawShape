@@ -10,12 +10,12 @@ public class Enter {
 	switch (kind) {
 	case 1:
 	    Circle circle = new Circle ();
-//	    FrameCore center = new FrameCore();
+//	    FrameCore center = new FrameCore(); 
 	    double x01 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра:"));
 	    double y01 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра:"));
-	    double radius = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
+	    double radius1 = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
 	    circle.setCenter (x01,y01);
-	    circle.setRadius (radius);
+	    circle.setRadius (radius1);
 	    circle.showDataCircle ();
 	    break;
 
@@ -23,9 +23,11 @@ public class Enter {
 	    Equi equi = new Equi();
 	    double x02 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
 	    double y02 = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
-	    double radius1 = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
+	    double radius2 = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
 	    int side = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
-	    equi.setEqui (x02, y02, radius1, side);
+	    equi.setCenter (x02,y02);
+	    equi.setRadius (radius2);
+	    equi.setSide (side);
 	    equi.showDataEqui ();
 	    break;
 
