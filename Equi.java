@@ -1,6 +1,5 @@
-import static java.lang.System.out;
 
-public class Equi { // class of Equilateral polygon
+public class Equi extends Shape { // class of Equilateral polygon
 
 	private int sides = 0;
 	private double radius = 0;
@@ -15,15 +14,20 @@ public class Equi { // class of Equilateral polygon
 	}
 
 	public void setCenter(double x, double y) {
-		center.setCenter(x, y); // Fan! I can't call this method directly from
-								// class Enter (line 28)
+		center.setCenter(x, y); 
+	}
+	
+	@Override
+	public void setData() {
+	    // TODO Auto-generated method stub
+	    
 	}
 
-	public void drawEqui() { // it's only show the data on concole
-		out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
+	public void drawShape() { // it's only show the data on concole
+	    System.out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
 		// out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
-		out.println("Радиус (radius) " + radius);
-		out.println("Количество сторон (sides) " + sides);
+	    System.out.println("Радиус (radius) " + radius);
+	    System.out.println("Количество сторон (sides) " + sides);
 	}
 
 }

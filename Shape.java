@@ -1,6 +1,6 @@
 
 abstract public class Shape 
 {
-    public abstract void inputData ();
+    public abstract void setData ();
     public abstract void drawShape ();
 }

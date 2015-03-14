@@ -17,7 +17,7 @@ public class Enter {
 			double radius1 = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус:"));
 			circle.setCenter(x01, y01);
 			circle.setRadius(radius1);
-			circle.drawCircle();
+			circle.drawShape();
 			break;
 
 		case 2:
@@ -29,7 +29,7 @@ public class Enter {
 			equi.setCenter(x02, y02);
 			equi.setRadius(radius2);
 			equi.setSide(side);
-			equi.drawEqui();
+			equi.drawShape();
 			break;
 
 		case 3:
@@ -50,7 +50,7 @@ public class Enter {
 				poly.setPoint(i, j, z);
 				j = 0;
 			}
-			poly.drawPoly();
+			poly.drawShape();
 			out.println();
 		}
 		System.out.println("Тип фигуры :  " + kind);
