@@ -1,4 +1,3 @@
-import static java.lang.System.out;
 
 public class Circle {
 
@@ -14,12 +13,9 @@ public class Circle {
 								// class Enter (line 17)
 	}
 
-	public void drawCircle() {
-		// will be a code to draw of Circle
+	public void drawCircle() { // it's only show the data on concole
+		System.out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
+		System.out.println("Радиус (radius) " + radius);
 	}
 
-	public void showDataCircle() { // show data of Circle on Console
-		out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
-		out.println("Радиус (radius) " + radius);
-	}
 }

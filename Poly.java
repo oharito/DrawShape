@@ -17,11 +17,7 @@ public class Poly { // class of Poly Line
 		points[i][j] = z;
 	}
 
-	public void drawPoly() { // draw of Poly Line
-		// will be a code to draw of Poly Line
-	}
-
-	public void showDataPoly() { // show data of Poly Line on Console
+	public void drawPoly() { // it's only show the data on concole
 		for (int x = 0; x < vertex; x++) {
 			out.print("Точка " + x + " = ");
 			for (int y = 0; y < 2; y++) {

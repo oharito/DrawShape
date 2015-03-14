@@ -19,14 +19,11 @@ public class Equi { // class of Equilateral polygon
 								// class Enter (line 28)
 	}
 
-	public void drawEqui() {
-		// will be a code to draw of equilateral polygon
-	}
-
-	public void showDataEqui() { // show data of equilateral polygon on Console
+	public void drawEqui() { // it's only show the data on concole
 		out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
 		// out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
 		out.println("Радиус (radius) " + radius);
 		out.println("Количество сторон (sides) " + sides);
 	}
+
 }
