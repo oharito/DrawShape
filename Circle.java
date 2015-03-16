@@ -1,6 +1,6 @@
 public class Circle extends Shape {
     private double radius = 0;
-    FrameCore center = new FrameCore();
+    Point2d center = new Point2d();
 
     public void setRadius(double r) {
 	radius = r;
@@ -9,10 +9,10 @@ public class Circle extends Shape {
     public void setCenter(double x, double y) {
 	center.setCenter(x, y);
     }
-    
+
     public void setData() {
 	// TODO Auto-generated method stub
-	
+
     }
 
     public void drawShape() { // it's only show the data on concole
