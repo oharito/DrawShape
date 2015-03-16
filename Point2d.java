@@ -1,12 +1,18 @@
 
 public class Point2d {
-    private double x0, y0;
-
-    public void setCenter(double x, double y) {
+    private double x0;
+    private double y0;
+    
+    Point2d (double x, double y) { // constructor
 	x0 = x;
 	y0 = y;
     }
 
+//    public void setCenter(double x, double y) {
+//	x0 = x;
+//	y0 = y;
+//    }
+    
     public double getCenterX() {
 	// System.out.println (x0);
 	return x0;
