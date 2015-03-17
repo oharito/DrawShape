@@ -7,21 +7,21 @@ public class Equi extends Shape { // class of Equilateral polygon
     Point2d center;
     
     public void setData() {
-	    double x = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
-	    double y = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
+	    double x = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate X:"));
+	    double y = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate Y:"));
 	    center = new Point2d(x, y);
-	    double r = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
+	    double r = Double.parseDouble(JOptionPane.showInputDialog("Input Circumscribed circle's Radius:"));
 	    radius = r;
-	    int s = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
+	    int s = Integer.parseInt(JOptionPane.showInputDialog("Input Sides's Number:"));
 	    sides = s;
 	    drawShape();
     }
 
     public void drawShape() { // it's only show the data on console
-	System.out.println("Центр фигуры (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
+	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	// out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
-	System.out.println("Радиус (radius) " + radius);
-	System.out.println("Количество сторон (sides) " + sides);
+	System.out.println("Radius " + radius);
+	System.out.println("Sides's Number " + sides);
     }
 
 }

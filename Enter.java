@@ -7,7 +7,7 @@ public class Enter {
     public void setKind () {
 	kind = Integer
 		    .parseInt(JOptionPane
-			    .showInputDialog("Введите тип фигуры:\n 1 - Окружность\n 2 - Равносторонний многоугольник\n 3 - Произвольная фигура"));
+			    .showInputDialog("Input Type of Shape:\n 1 - Circle\n 2 - Equilateral polygon\n 3 - PolyLine"));
     }
     
 
@@ -29,6 +29,6 @@ public class Enter {
 	    Shape poly = new Poly();
 	    poly.setData();
 //	    poly.drawShape();	}
-	System.out.println("Тип фигуры :  " + kind);
+	System.out.println("Type of the Shape :  " + kind);
     }
 }
