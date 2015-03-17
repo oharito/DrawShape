@@ -18,7 +18,7 @@ public class Equi extends Shape { // class of Equilateral polygon
     }
 
     public void drawShape() { // it's only show the data on console
-	System.out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
+	System.out.println("Центр фигуры (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	// out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
 	System.out.println("Радиус (radius) " + radius);
 	System.out.println("Количество сторон (sides) " + sides);

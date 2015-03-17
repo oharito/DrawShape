@@ -23,7 +23,7 @@ public class Circle extends Shape {
     }
 
     public void drawShape() { // it's only show the data on console
-	System.out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
+	System.out.println("Центр фигуры (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	System.out.println("Радиус (radius) " + radius);
     }
 
