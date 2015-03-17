@@ -8,11 +8,6 @@ public class Point2d {
 	y0 = y;
     }
 
-//    public void setCenter(double x, double y) {
-//	x0 = x;
-//	y0 = y;
-//    }
-    
     public double getCenterX() {
 	// System.out.println (x0);
 	return x0;

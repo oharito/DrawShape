@@ -4,16 +4,7 @@ public class Circle extends Shape {
     private double radius;
     private Point2d center;
     
-//   Circle (double x, double y, double r) { //constructor
-//	center = new Point2d (x,y);
-//	radius =r;
-//  }
-
-    // public void setCenter(double x, double y) {
-    // center.setCenter(x, y);
-    // }
-
-    public void setData() {
+    Circle() { //constructor
 	double x = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate X:"));
 	double y = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate Y:"));
 	center = new Point2d(x, y);

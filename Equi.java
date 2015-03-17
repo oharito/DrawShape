@@ -6,7 +6,7 @@ public class Equi extends Shape { // class of Equilateral polygon
     private double radius;
     Point2d center;
     
-    public void setData() {
+    Equi() { //constructor
 	    double x = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate X:"));
 	    double y = Double.parseDouble(JOptionPane.showInputDialog("Input Center's coordinate Y:"));
 	    center = new Point2d(x, y);

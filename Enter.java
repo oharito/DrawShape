@@ -14,21 +14,16 @@ public class Enter {
     public void choice() {
 	switch (kind) {
 	case 1:
-	    Shape circle = new Circle();
-	    circle.setData();
-//	    circle.drawShape();
+	    new Circle();
 	    break;
 
 	case 2:
-	    Shape equi = new Equi();
-	    equi.setData();
-//	    equi.drawShape();
+	    new Equi();
 	    break;
 
 	case 3:
-	    Shape poly = new Poly();
-	    poly.setData();
-//	    poly.drawShape();	}
+	    new Poly();
+	}
 	System.out.println("Type of the Shape :  " + kind);
     }
 }

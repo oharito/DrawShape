@@ -5,7 +5,7 @@ public class Poly extends Shape { // class of PolyLine
     private int vertex;
     private ArrayList<Point2d> dot = new ArrayList<Point2d>();
 
-    public void setData() {
+    Poly() { //constructor
 	int v = Integer.parseInt(JOptionPane.showInputDialog("Input Vertex's number:"));
 	vertex = v;
 	double x;
