@@ -1,5 +1,4 @@
 import javax.swing.*;
-import static java.lang.System.out;
 
 public class Enter {
 
@@ -10,22 +9,21 @@ public class Enter {
     public void choice() {
 	switch (kind) {
 	case 1:
-	    Circle circle = new Circle();
+	    Shape circle = new Circle();
 	    circle.setData();
 	    circle.drawShape();
 	    break;
 
 	case 2:
-	    Equi equi = new Equi();
+	    Shape equi = new Equi();
 	    equi.setData();
 	    equi.drawShape();
 	    break;
 
 	case 3:
-	    Poly poly = new Poly();
+	    Shape poly = new Poly();
 	    poly.setData();
-	    poly.drawShape();
-	    out.println();
+	    poly.drawShape();	    System.out.println();
 	}
 	System.out.println("Тип фигуры :  " + kind);
     }

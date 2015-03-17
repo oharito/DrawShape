@@ -1,28 +1,22 @@
+import javax.swing.JOptionPane;
+
 public class Equi extends Shape { // class of Equilateral polygon
 
-    private int sides = 0;
-    private double radius = 0;
-    Point2d center = new Point2d();
-
-    public void setRadius(double r) {
-	radius = r;
-    }
-
-    public void setSide(int s) {
-	sides = s;
-    }
-
-    public void setCenter(double x, double y) {
-	center.setCenter(x, y);
-    }
-
-    @Override
+    private int sides;
+    private double radius;
+    Point2d center;
+    
     public void setData() {
-	// TODO Auto-generated method stub
-
+	    double x = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты X центра фигуры:"));
+	    double y = Double.parseDouble(JOptionPane.showInputDialog("Введите координаты Y центра фигуры:"));
+	    center = new Point2d(x, y);
+	    double r = Double.parseDouble(JOptionPane.showInputDialog("Введите радиус описанной окружности:"));
+	    radius = r;
+	    int s = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
+	    sides = s;
     }
 
-    public void drawShape() { // it's only show the data on concole
+    public void drawShape() { // it's only show the data on console
 	System.out.println("Центр фигуры (x0 x0) " + center.getCenterX() + "  " + center.getCenterY());
 	// out.println("Центр фигуры (x0 x0) " + x0 + "  " + y0);
 	System.out.println("Радиус (radius) " + radius);
