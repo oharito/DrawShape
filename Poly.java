@@ -18,6 +18,7 @@ public class Poly extends Shape { // class of PolyLine
 	    points[i][j] = z;
 	    j = 0;
 	}
+	drawShape();
     }
 
     public void drawShape() { // it's only show the data on console

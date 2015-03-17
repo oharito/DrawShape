@@ -14,6 +14,7 @@ public class Equi extends Shape { // class of Equilateral polygon
 	    radius = r;
 	    int s = Integer.parseInt(JOptionPane.showInputDialog("Введите количество сторон:"));
 	    sides = s;
+	    drawShape();
     }
 
     public void drawShape() { // it's only show the data on console
