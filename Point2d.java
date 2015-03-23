@@ -2,12 +2,13 @@
 public class Point2d {
     private double x0;
     private double y0;
+    Point2d pos;
     
     Point2d (double x, double y) { // constructor
 	x0 = x;
 	y0 = y;
     }
-
+    
     public double getCenterX() {
 	// System.out.println (x0);
 	return x0;

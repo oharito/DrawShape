@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
-public class Poly extends Shape { // class of PolyLine
+public class Poly implements Shape { // class of PolyLine
     private int vertex;
     private ArrayList<Point2d> dot = new ArrayList<Point2d>();
 
@@ -17,12 +17,23 @@ public class Poly extends Shape { // class of PolyLine
 	}
 	drawShape();
     }
+    
+    Poly (int vertex, Point2d a, Point2d b, Point2d c, Point2d d) { //Constructor for the class Test
+	this.vertex = vertex;
+	dot.add(a);
+	dot.add(b);
+	dot.add(c);
+	dot.add(d);
+	drawShape();
+    }
 
     public void drawShape() { // it's only show the data on console
+	System.out.println("Vertex " + vertex);
 	for (int i = 0; i < vertex; i++) {
 	    System.out.print("Point " + i + "  =  ");
 	    System.out.println(dot.get(i).getCenterX() + "   " + dot.get(i).getCenterY());
 	}
+	System.out.println();
     }
 
 }

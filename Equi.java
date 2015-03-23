@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Equi extends Shape { // class of Equilateral polygon
+public class Equi implements Shape { // class of Equilateral polygon
 
     private int sides;
     private double radius;
@@ -16,11 +16,19 @@ public class Equi extends Shape { // class of Equilateral polygon
 	    sides = s;
 	    drawShape();
     }
+    
+    Equi (int sides, double radius, Point2d center) { //Constructor for the class Test
+	this.sides = sides;
+	this.radius = radius;
+	this.center = center;
+	drawShape();
+    }
 
     public void drawShape() { // it's only show the data on console
 	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	System.out.println("Radius " + radius);
 	System.out.println("Sides's Number " + sides);
+	System.out.println();
     }
 
 }

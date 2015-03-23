@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Rhomb extends Shape { // class of Rhomb
+public class Rhomb implements Shape { // class of Rhomb
     private double width;
     private double height;
     Point2d center;
@@ -16,9 +16,17 @@ public class Rhomb extends Shape { // class of Rhomb
 	    drawShape();
     }
     
+    Rhomb (double width, double height, Point2d center) { //Constructor for the class Test
+	this.width = width;
+	this.height = height;
+	this.center =center;
+	drawShape();
+    }
+    
     public void drawShape() { // it's only show the data on console
 	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	System.out.println("Width " + width);
 	System.out.println("Height " + height);
+	System.out.println();
     }
 }
