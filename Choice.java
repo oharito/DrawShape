@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Choice {
-    boolean isFile = false;
+    private boolean isFile = false;
     String list = "Input Type of Shape:\n"
     		+ "0 - Read from File\n"
     		+ "1 - Circle\n"

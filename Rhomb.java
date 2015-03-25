@@ -24,6 +24,7 @@ public class Rhomb implements Shape { // class of Rhomb
     }
     
     public void drawShape() { // it's only show the data on console
+	System.out.println("Type of the Shape : 4 (Rhomb)");
 	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	System.out.println("Width " + width);
 	System.out.println("Height " + height);

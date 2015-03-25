@@ -25,6 +25,7 @@ public class Equi implements Shape { // class of Equilateral polygon
     }
 
     public void drawShape() { // it's only show the data on console
+	System.out.println("Type of the Shape : 2 (Equilateral polygon)");
 	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
 	System.out.println("Radius " + radius);
 	System.out.println("Sides's Number " + sides);

@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+
 import java.util.ArrayList;
 
 public class Poly implements Shape { // class of PolyLine
@@ -28,6 +29,7 @@ public class Poly implements Shape { // class of PolyLine
     }
 
     public void drawShape() { // it's only show the data on console
+	System.out.println("Type of the Shape : 3 (PolyLine)");
 	System.out.println("Vertex " + vertex);
 	for (int i = 0; i < vertex; i++) {
 	    System.out.print("Point " + i + "  =  ");
