@@ -1,6 +1,11 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Choice {
-    public String list = "Input Type of Shape:\n"
-    		+ "0 - Test\n"
+    boolean isFile = false;
+    String list = "Input Type of Shape:\n"
+    		+ "0 - Read from File\n"
     		+ "1 - Circle\n"
     		+ "2 - Equilateral polygon\n"
     		+ "3 - PolyLine\n"
@@ -9,9 +14,20 @@ public class Choice {
     public Object choice (int k) {
 	switch (k) {
 	case 0:
-	    return new Test ();
+//	    return new Test ();
+	    isFile = true;
+	    Scanner readFile = null;
+	    try {
+		readFile = new Scanner (new File("shape.txt"));
+	    } catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	    }
+	    int a = readFile.nextInt();
+	    choice (a);
+	    break;
 	case 1:
-	    return new Circle();
+	    return new Circle(isFile);
 	case 2:
 	    return new Equi();
 	case 3:
