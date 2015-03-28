@@ -2,7 +2,7 @@
 public class Point2d {
     private double x0;
     private double y0;
-    Point2d pos;
+//  Point2d pos;
     
     Point2d (double x, double y) { // constructor
 	x0 = x;

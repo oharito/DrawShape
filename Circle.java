@@ -8,8 +8,8 @@ public class Circle implements Shape {
     private double radius;
     private Point2d center;
     
-    Circle(boolean isFile) { 
-	if (isFile) {setCircleFromFile();}
+    Circle() { 
+	if (Choice.isFile) {setCircleFromFile();}
 	else {setCircleFromDialog();}
 	drawShape(); 
     }

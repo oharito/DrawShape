@@ -3,8 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Choice {
-    private boolean isFile = false;
-    String list = "Input Type of Shape:\n"
+    static boolean isFile = false;
+    static String list = "Input Type of Shape:\n"
     		+ "0 - Read from File\n"
     		+ "1 - Circle\n"
     		+ "2 - Equilateral polygon\n"
@@ -27,7 +27,7 @@ public class Choice {
 	    choice (a);
 	    break;
 	case 1:
-	    return new Circle(isFile);
+	    return new Circle();
 	case 2:
 	    return new Equi();
 	case 3:
