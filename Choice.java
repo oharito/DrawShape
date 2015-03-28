@@ -11,7 +11,9 @@ public class Choice {
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
     
-    public Object choice (int k) {
+    private Choice () {}; // we can newer create objects of this class
+    
+    public static Object choice (int k) {
 	switch (k) {
 	case 0:
 //	    return new Test ();
