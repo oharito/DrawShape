@@ -13,7 +13,7 @@ public class Choice {
     
     private Choice () {}; // we can newer create objects of this class
     
-    public static Object choice (int k) {
+    public static Object choice (int k) throws FileNotFoundException {
 	switch (k) {
 	case 0:
 //	    return new Test ();
