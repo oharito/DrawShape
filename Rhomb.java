@@ -1,4 +1,4 @@
-
+ 
 import javax.swing.JOptionPane;
 
 public class Rhomb implements Shape { // class of Rhomb
