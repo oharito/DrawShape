@@ -1,32 +1,24 @@
- 
-import javax.swing.JOptionPane;
 
 public class Rhomb implements Shape { // class of Rhomb
     private double width;
     private double height;
     Point2d center;
-    private String data;
-    private String [] tokens;
+    static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Rhomb's Width\" \"Height:\"";
 
     Rhomb() { // constructor
-	inputData();
-	setData();
+	new Input(order);
+	setShape();
 	drawShape();
     }
     
-    void inputData () {
-	data = JOptionPane.showInputDialog("Input via blank: \"Center's coordinate X0\" \"Y0\" \"Rhomb's Width\" \"Height:\"");
-	tokens = data.split(" ");
+    void setShape() {
+	double x = Double.parseDouble(Input.getData(1));
+	double y = Double.parseDouble(Input.getData(2));
+	center = new Point2d(x, y);
+	width = Double.parseDouble(Input.getData(3));
+	height = Double.parseDouble(Input.getData(4));
     }
     
-    void setData () {
-	double x = Double.parseDouble(tokens[0]);
-	double y = Double.parseDouble(tokens[1]);
-	center = new Point2d(x, y);
-	width = Double.parseDouble(tokens[2]);
-	height = Double.parseDouble(tokens[3]);
-    }
-
     Rhomb(double width, double height, Point2d center) { // Constructor for the class Test
 	this.width = width;
 	this.height = height;

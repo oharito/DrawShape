@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Choice {
     static boolean isFile = false;
     static String list = "Input Type of Shape:\n"
+	    	+ "-1- Test\n"
     		+ "0 - Read from File\n"
     		+ "1 - Circle\n"
     		+ "2 - Equilateral polygon\n"
@@ -15,8 +16,9 @@ public class Choice {
     
     public static Object choice (int k) throws FileNotFoundException {
 	switch (k) {
+	case -1:
+	    return new Test();
 	case 0:
-//	    return new Test ();
 	    isFile = true;
 	    Scanner readFile = null;
 	    try {
