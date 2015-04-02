@@ -12,8 +12,6 @@ public class Choice {
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
     
-    private Choice () {}; // we can newer create objects of this class
-    
     public static Object choice (int k) throws FileNotFoundException {
 	switch (k) {
 	case -1:

@@ -3,7 +3,7 @@ public class Equi implements Shape { // class of Equilateral polygon
 
     private int sides;
     private double radius;
-    Point2d center;
+    private Point2d center;
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Radius\" \"Number of Sides\"";
     
     Equi() {

@@ -1,24 +1,27 @@
-import javax.swing.JOptionPane;
-
 import java.util.ArrayList;
 
 public class Poly implements Shape { // class of PolyLine
     private int vertex;
     private ArrayList<Point2d> dot = new ArrayList<Point2d>();
-
-    Poly() { //constructor
-	int v = Integer.parseInt(JOptionPane.showInputDialog("Input Vertex's number:"));
-	vertex = v;
-	double x;
-	double y;
-	for (int i = 0; i < vertex; i++) {
-	    x = Double.parseDouble(JOptionPane.showInputDialog("Input Shape's point X" + i + ":"));
-	    y = Double.parseDouble(JOptionPane.showInputDialog("Input Shape's point Y" + i + ":"));
-	    dot.add(new Point2d(x, y));
-	}
+    static String order = "Input via blank: \"Vertex's number\" \"Shape's points X\" \"Shape's points Y\"";
+    
+    Poly() {
+	new Input(order);
+	setShape();
 	drawShape();
     }
     
+    void setShape() {
+	vertex = Integer.parseInt(Input.getData(1));
+	double x;
+	double y;
+	for (int i = 2; i <= vertex*2; i = i + 2) {
+	    x = Double.parseDouble(Input.getData(i));
+	    y = Double.parseDouble(Input.getData(i+1));
+	    dot.add(new Point2d(x, y));
+	}
+    }
+
     Poly (int vertex, Point2d a, Point2d b, Point2d c, Point2d d) { //Constructor for the class Test
 	this.vertex = vertex;
 	dot.add(a);
