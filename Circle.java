@@ -5,9 +5,7 @@ public class Circle extends Shape {
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Radius\"";
     
     Circle() {
-	new Input(order);
-	setShape();
-	drawShape();
+	doShape(order);
     }
     
     public void setShape() {

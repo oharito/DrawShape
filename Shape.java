@@ -7,6 +7,12 @@ public abstract class Shape {
     public void setPos(Point2d pos) {
 	this.pos = pos;
     }
+    public void doShape(String order) {
+	new Input(order);
+	setShape();
+	drawShape();
+    }
+    
     public abstract void setShape();
     public abstract void drawShape();
 }
