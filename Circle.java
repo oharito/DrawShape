@@ -13,15 +13,10 @@ public class Circle extends Shape {
     public void setShape() {
 	double x = Double.parseDouble(Input.getData(1));
 	double y = Double.parseDouble(Input.getData(2));
-	setPos(x, y);
-//	pos = new Point2d(x, y);
+	pos = new Point2d(x, y);
 	radius = Double.parseDouble(Input.getData(3));
     }
     
-    public void setPos(double x, double y) {
-	pos = new Point2d(x, y);
-	
-    }
 
     Circle (double radius, Point2d pos) { //Constructor for the class Test
 	this.radius = radius;
