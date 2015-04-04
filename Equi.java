@@ -3,7 +3,7 @@ public class Equi extends Shape { // class of Equilateral polygon
 
     private int sides;
     private double radius;
-    private Point2d center;
+//    private Point2d center;
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Radius\" \"Number of Sides\"";
     
     Equi() {
@@ -15,21 +15,21 @@ public class Equi extends Shape { // class of Equilateral polygon
     public void setShape() {
 	double x = Double.parseDouble(Input.getData(1));
 	double y = Double.parseDouble(Input.getData(2));
-	center = new Point2d(x, y);
+	pos = new Point2d(x, y);
 	radius = Double.parseDouble(Input.getData(3));
 	sides = Integer.parseInt(Input.getData(4));
     }
     
-    Equi (int sides, double radius, Point2d center) { //Constructor for the class Test
+    Equi (int sides, double radius, Point2d pos) { //Constructor for the class Test
 	this.sides = sides;
 	this.radius = radius;
-	this.center = center;
+	this.pos = pos;
 	drawShape();
     }
 
     public void drawShape() { // it's only show the data on console
 	System.out.println("Type of the Shape : 2 (Equilateral polygon)");
-	System.out.println("Shape's Center (x0 y0) " + center.getCenterX() + "  " + center.getCenterY());
+	System.out.println("Shape's Center (x0 y0) " + pos.getCenterX() + "  " + pos.getCenterY());
 	System.out.println("Radius " + radius);
 	System.out.println("Sides's Number " + sides);
 	System.out.println();
