@@ -1,6 +1,6 @@
- public interface Shape {
+ public abstract class Shape {
 
-//	public abstract void setData();
+	public abstract void setShape();
 
     	public abstract void drawShape();
 }

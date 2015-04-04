@@ -1,5 +1,5 @@
 
-public class Rhomb implements Shape { // class of Rhomb
+public class Rhomb extends Shape { // class of Rhomb
     private double width;
     private double height;
     private Point2d center;
@@ -11,7 +11,7 @@ public class Rhomb implements Shape { // class of Rhomb
 	drawShape();
     }
     
-    void setShape() {
+    public void setShape() {
 	double x = Double.parseDouble(Input.getData(1));
 	double y = Double.parseDouble(Input.getData(2));
 	center = new Point2d(x, y);

@@ -1,5 +1,5 @@
 
-public class Circle implements Shape {
+public class Circle extends Shape { 
     private double radius;
     private Point2d center;
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Radius\"";
@@ -10,7 +10,7 @@ public class Circle implements Shape {
 	drawShape();
     }
     
-    void setShape() {
+    public void setShape() {
 	double x = Double.parseDouble(Input.getData(1));
 	double y = Double.parseDouble(Input.getData(2));
 	center = new Point2d(x, y);

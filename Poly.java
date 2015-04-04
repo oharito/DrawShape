@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Poly implements Shape { // class of PolyLine
+public class Poly extends Shape { // class of PolyLine
     private int vertex;
     private ArrayList<Point2d> dot = new ArrayList<Point2d>();
     static String order = "Input via blank: \"Vertex's number\" \"Shape's points X\" \"Shape's points Y\"";
@@ -11,7 +11,7 @@ public class Poly implements Shape { // class of PolyLine
 	drawShape();
     }
     
-    void setShape() {
+    public void setShape() {
 	vertex = Integer.parseInt(Input.getData(1));
 	double x;
 	double y;
