@@ -38,8 +38,8 @@ public class KindOfShape extends JFrame {
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	getContentPane().setLayout(null);
 	
-	JButton btnNewButton = new JButton(Choice.listOfShape[0]);
-	btnNewButton.addActionListener(new ActionListener() {
+	JButton readFromFile = new JButton(Choice.listOfShape[0]);
+	readFromFile.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 		    try {
 			Choice.choice(0);
@@ -49,22 +49,13 @@ public class KindOfShape extends JFrame {
 		    }
 		}
 	});
-	btnNewButton.setBounds(10, 11, 126, 23);
-	getContentPane().add(btnNewButton);
+	readFromFile.setBounds(10, 11, 126, 23);
+	getContentPane().add(readFromFile);
 	
-	JButton btnNewButton_1 = new JButton(Choice.listOfShape[1]);
-	btnNewButton_1.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {
-		    try {
-			Choice.choice(1);
-		    } catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		    }
-		}
-	});
-	btnNewButton_1.setBounds(10, 36, 126, 23);
-	getContentPane().add(btnNewButton_1);
+	JButton circle = new JButton(Choice.listOfShape[1]);
+	circle.addActionListener(new ActionListener() {public void actionPerformed(ActionEvent arg0) {new Circle();}});
+	circle.setBounds(10, 36, 126, 23);
+	getContentPane().add(circle);
 
     }
 }

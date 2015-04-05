@@ -16,7 +16,7 @@ public class Choice {
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
     
-    Choice() {
+    public Choice() {
 	listOfShape[0] = new String("Read from File");
 	listOfShape[1] = new String("Circle");
 	listOfShape[2] = new String("Equilateral polygon");
