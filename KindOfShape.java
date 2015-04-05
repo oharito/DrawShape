@@ -17,7 +17,7 @@ public class KindOfShape extends JFrame {
     /**
      * Launch the application.
      */
-    public static void go() {
+    public static void doFrame() {
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
 		try {
