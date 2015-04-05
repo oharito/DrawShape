@@ -16,13 +16,14 @@ public class Choice {
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
     
-    public void createListOfShape() {
+    Choice() {
 	listOfShape[0] = new String("Read from File");
 	listOfShape[1] = new String("Circle");
 	listOfShape[2] = new String("Equilateral polygon");
 	listOfShape[3] = new String("PolyLine");
 	listOfShape[4] = new String("Rhomb");
 //	listOfShape.add(new String(" "));
+	KindOfShape.doFrame();
     }
     
     public static Object choice (int k) throws FileNotFoundException {

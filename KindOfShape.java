@@ -38,7 +38,7 @@ public class KindOfShape extends JFrame {
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	getContentPane().setLayout(null);
 	
-	JButton btnNewButton = new JButton("Read from File");
+	JButton btnNewButton = new JButton(Choice.listOfShape[0]);
 	btnNewButton.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 		    try {
@@ -52,7 +52,7 @@ public class KindOfShape extends JFrame {
 	btnNewButton.setBounds(10, 11, 126, 23);
 	getContentPane().add(btnNewButton);
 	
-	JButton btnNewButton_1 = new JButton("Circle");
+	JButton btnNewButton_1 = new JButton(Choice.listOfShape[1]);
 	btnNewButton_1.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 		    try {
