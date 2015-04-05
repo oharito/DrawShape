@@ -4,9 +4,10 @@ import javax.swing.JOptionPane;
 
 public class drawOfFigure {
     public static void main(String[] args) throws FileNotFoundException {
-	int kind;
+//	int kind;
+	KindOfShape.go();
 //	Choice choice = new Choice();
-	kind = Integer.parseInt(JOptionPane.showInputDialog(Choice.list));
-	Choice.choice(kind);
+//	kind = Integer.parseInt(JOptionPane.showInputDialog(Choice.list));
+//	Choice.choice(kind);
     }
 }
