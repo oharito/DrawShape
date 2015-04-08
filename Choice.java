@@ -1,29 +1,27 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-//import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Choice {
     static boolean isFile = false;
- //   static ArrayList<String> listOfShape = new ArrayList<String>();
-    static final int NUM_OF_SHAPE = 5;
-    static String listOfShape [] = new String[NUM_OF_SHAPE];
-    static String list = "Input Type of Shape:\n"
+//    static final int NUM_OF_SHAPE = 5;
+//    static String listOfShape [] = new String[NUM_OF_SHAPE];
+/*    static String list = "Input Type of Shape:\n"
 	    	+ "-1- Test\n"
     		+ "0 - Read from File\n"
     		+ "1 - Circle\n"
     		+ "2 - Equilateral polygon\n"
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
-    
+ */   
     public Choice() {
-	listOfShape[0] = new String("Read from File");
+	/*	listOfShape[0] = new String("Read from File");
 	listOfShape[1] = new String("Circle");
 	listOfShape[2] = new String("Equilateral polygon");
 	listOfShape[3] = new String("PolyLine");
 	listOfShape[4] = new String("Rhomb");
-//	listOfShape.add(new String(" "));
-	KindOfShape.doFrame();
+*/
+	ChoiceOfShape.doChoice();
     }
     
     public static Object choice (int k) throws FileNotFoundException {
