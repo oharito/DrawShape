@@ -12,6 +12,7 @@ public class ChoiceOfShape extends JFrame {
     private final static int BUT_H = 150;
     private final static int BUT_MX = 45;
     private final static int BUT_MY = 11;
+    private static int numOfShape = 0;
     
     public static void doChoice() {
 	EventQueue.invokeLater(new Runnable() {
@@ -31,15 +32,8 @@ public class ChoiceOfShape extends JFrame {
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setLayout(null);
 //============
-//============
-	JButton test = new JButton("Test");
-	test.setBounds(BUT_MX, BUT_MY, BUT_H, BUT_W);
-	test.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent arg0) {
-		new Test();}});
-	add(test);
 //===========
-	JButton readFromFile = new JButton("Read from File");
+	JButton readFromFile = new JButton(Choice.listOfShape[numOfShape++]);
 	readFromFile.setBounds(BUT_MX, BUT_MY+25, BUT_H, BUT_W);
 	readFromFile.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
@@ -51,38 +45,58 @@ public class ChoiceOfShape extends JFrame {
 		}}});
 	add(readFromFile);
 //===========
-	JButton circle = new JButton("Circle");
+	JButton circle = new JButton(Choice.listOfShape[numOfShape++]);
 	circle.setBounds(BUT_MX, BUT_MY+2*25, BUT_H, BUT_W);
 	circle.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		new Circle();
+		try {
+		    Choice.choice(1);
+		} catch (FileNotFoundException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 	    }
 	});
 	add(circle);
 //=========
-	JButton equi = new JButton("Equilateral polygon");
+	JButton equi = new JButton(Choice.listOfShape[numOfShape++]);
 	equi.setBounds(BUT_MX, BUT_MY+3*25, BUT_H, BUT_W);
 	equi.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		new Equi();
+		try {
+		    Choice.choice(2);
+		} catch (FileNotFoundException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 	    }
 	});
 	add(equi);
 //===========
-	JButton poly = new JButton("PolyLine");
+	JButton poly = new JButton(Choice.listOfShape[numOfShape++]);
 	poly.setBounds(BUT_MX, BUT_MY+4*25, BUT_H, BUT_W);
 	poly.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		new Poly();
+		try {
+		    Choice.choice(3);
+		} catch (FileNotFoundException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 	    }
 	});
 	add(poly);
 //============
-	JButton phomb = new JButton("Rhomb");
+	JButton phomb = new JButton(Choice.listOfShape[numOfShape++]);
 	phomb.setBounds(BUT_MX, BUT_MY+5*25, BUT_H, BUT_W);
 	phomb.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		new Rhomb();
+		try {
+		    Choice.choice(4);
+		} catch (FileNotFoundException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 	    }
 	});
 	add(phomb);

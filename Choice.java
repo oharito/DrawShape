@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Choice {
     static boolean isFile = false;
-//    static final int NUM_OF_SHAPE = 5;
-//    static String listOfShape [] = new String[NUM_OF_SHAPE];
+    static final int NUM_OF_SHAPE = 5;
+    static String listOfShape [] = new String[NUM_OF_SHAPE];
 /*    static String list = "Input Type of Shape:\n"
 	    	+ "-1- Test\n"
     		+ "0 - Read from File\n"
@@ -15,19 +15,19 @@ public class Choice {
     		+ "4 - Rhomb\n";
  */   
     public Choice() {
-	/*	listOfShape[0] = new String("Read from File");
+	listOfShape[0] = new String("Read from File");
 	listOfShape[1] = new String("Circle");
 	listOfShape[2] = new String("Equilateral polygon");
 	listOfShape[3] = new String("PolyLine");
 	listOfShape[4] = new String("Rhomb");
-*/
+
 	ChoiceOfShape.doChoice();
     }
     
     public static Object choice (int k) throws FileNotFoundException {
 	switch (k) {
-	case -1:
-	    return new Test();
+//	case -1:
+//	    return new Test();
 	case 0:
 	    isFile = true;
 	    Scanner readFile = null;
