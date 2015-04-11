@@ -2,18 +2,25 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Choice {
     static boolean isFile = false;
-    static final int NUM_OF_SHAPE = 5;
-    static String listOfShape [] = new String[NUM_OF_SHAPE];
-/*    static String list = "Input Type of Shape:\n"
-	    	+ "-1- Test\n"
+    static final int NUM_OF_SHAPE = 4;
+    static String listOfShape [] = new String[NUM_OF_SHAPE+1];
+    
+    
+    public static void inputDialog() throws FileNotFoundException {
+	String list = "Input Type of Shape:\n"
     		+ "0 - Read from File\n"
     		+ "1 - Circle\n"
     		+ "2 - Equilateral polygon\n"
     		+ "3 - PolyLine\n"
     		+ "4 - Rhomb\n";
- */   
+	int kind = Integer.parseInt(JOptionPane.showInputDialog(list));
+	choice(kind);
+    }
+    
     public Choice() {
 	listOfShape[0] = new String("Read from File");
 	listOfShape[1] = new String("Circle");
