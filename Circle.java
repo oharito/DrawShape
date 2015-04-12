@@ -1,3 +1,10 @@
+import java.awt.Color;
+import java.awt.Graphics;
+//import java.awt.Graphics2D;
+
+
+import javax.swing.JPanel;
+
 
 public class Circle extends Shape { 
     private double radius;
@@ -27,6 +34,26 @@ public class Circle extends Shape {
 	System.out.println("Shape's Center (x0 y0) " + getPos().getCenterX() + "  " + getPos().getCenterY());
 	System.out.println("Radius " + radius);
 	System.out.println();
+	@SuppressWarnings("rawtypes")
+	Draw draw = new Draw();
+	DrawPanel panel = new DrawPanel();
+	draw.addDrawPanel(panel);
+	
+	
     }
+    @SuppressWarnings("serial")
+    class DrawPanel extends JPanel {
 
+	public void paintComponent(Graphics g) {
+	    g.setColor(Color.gray);
+	    g.fillRect(0, 0, this.getWidth(), this.getHeight());
+//	    Graphics2D g2d = (Graphics2D) g;
+	    g.setColor(Color.red);
+	    int xCenter = (int) getPos().getCenterX();
+	    int yCenter = (int) getPos().getCenterY();
+	    int rad = (int) radius;
+	    g.drawOval(xCenter - rad, yCenter - rad, rad*2, rad*2);
+
+	}
+    } // close inner class
 }
