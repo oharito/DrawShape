@@ -6,7 +6,7 @@ public class Poly extends Shape { // class of PolyLine
     static String order = "Input via blank: \"Vertex's number\" \"Shape's points X\" \"Shape's points Y\"";
     
     Poly() {
-	new Input(order);
+	Input.input(order);
 	setShape();
 	drawShape();
     }

@@ -9,13 +9,13 @@ public class Input {
     private static String data;
     private static String [] tokens;
     
-    Input(String order) {
+    public static void input(String order) {
 	if (Choice.isFile) {inputDataFromFile();}
 	else {inputDataFromWindow(order);}
 	tokens = data.split(" ");
     }
     
-    private static void inputDataFromFile() {
+    public static void inputDataFromFile() {
 	Scanner readFile = null;
 	    try {
 		readFile = new Scanner (new File("shape.txt"));
@@ -24,10 +24,12 @@ public class Input {
 		e.printStackTrace();
 	    }
 	    data = readFile.nextLine();
+	    tokens = data.split(" ");
     }
 
-    private static void inputDataFromWindow (String dialog) {
+    public static void inputDataFromWindow (String dialog) {
 	data = "anySymbol " + JOptionPane.showInputDialog(dialog);
+	tokens = data.split(" ");
     }
     
     public static String getData(int i) {

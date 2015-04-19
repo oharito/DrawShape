@@ -7,7 +7,7 @@ public class Equi extends Shape { // class of Equilateral polygon
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Radius\" \"Number of Sides\"";
     
     Equi() {
-	new Input(order);
+	Input.input(order);
 	setShape();
 	drawShape();
     }

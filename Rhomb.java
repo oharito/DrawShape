@@ -6,7 +6,7 @@ public class Rhomb extends Shape { // class of Rhomb
     static String order = "Input via blank: \"Center's coordinate X0\" \"Y0\" \"Rhomb's Width\" \"Height:\"";
 
     Rhomb() { // constructor
-	new Input(order);
+	Input.input(order);
 	setShape();
 	drawShape();
     }
