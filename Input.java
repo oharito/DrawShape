@@ -10,9 +10,7 @@ public class Input {
     private static String [] tokens;
     
     public static void input(String order) {
-	if (Choice.isFile) {inputDataFromFile();}
-	else {inputDataFromWindow(order);}
-	tokens = data.split(" ");
+	if (!Choice.isFile) {inputDataFromWindow(order);}
     }
     
     public static void inputDataFromFile() {
