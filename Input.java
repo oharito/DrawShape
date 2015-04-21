@@ -13,7 +13,7 @@ public class Input {
     private static String [] tokens;
     
     public static void input(String order) {
-	if (!Choice.isFile) {inputDataFromWindow(order);}
+	if (!ChoiceOfShape.isFile) {inputDataFromWindow(order);}
     }
     
     public static void inputDataFromFile() {
